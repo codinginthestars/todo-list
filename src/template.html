@@ -3,9 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do List</title>
 </head>
 <body>
-    
+    <header>
+        <div id="heading">
+            <h1>To-Do List</h1>
+        </div>
+        <div id="top-buttons">
+            <button id="login">Log In</button>
+            <button id="signup">Sign Up</button>
+        </div>
+    </header>
+    <section id="side-bar">
+        <div id="new-buttons">
+            <button id="new-project" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74C0FC" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>New Project</button>
+            <button id="new-task" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74C0FC" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM232 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>New Task</button>
+        </div>
+        <div id="list-created-tasks">
+
+        </div>
+        <div id="list-created-projects">
+
+        </div>
+    </section>
+    <div id="content">
+
+    </div>
+
+    <!-- New Task Form -->
+    <dialog id="task-form">
+        <form id="tasks">
+            <div class="form-heading">
+                <h2>Add Task</h2>
+            </div>
+            <div class="form-container" id="task-container">
+                <div class="title-cotainer">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="description-container">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" form="tasks"></textarea>
+                </div>
+                <div class="date-container">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" min="2024-07-01" max="2100-01-01" />
+                </div>
+                <div class="priority">
+                    <label for="priority">Priority?</label>
+                    <input type="checkbox" id="priority" name="priority" value="priority" />
+                </div>
+            </div>
+            <div class="form-buttons" id="task-buttons">
+                <button id="add" type="submit" formmethod="dialog">Add</button>
+                <button id="cancel" type="button">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <!-- New Project Form -->
+    <dialog id="project-form">
+        <form id="projects">
+            <div class="form-heading">
+                <h2>Add Project</h2>
+            </div>
+            <div class="form-container" id="project-container">
+                <label for="title-project">Title</label>
+                <input type="text" id="title-project" name="title-project" required>
+            </div>
+            <div class="form-buttons" id="project-buttons">
+                <button id="addTwo" type="submit" formmethod="dialog">Add</button>
+                <button id="cancelTwo">Cancel</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 </html>
